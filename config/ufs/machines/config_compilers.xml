@@ -661,4 +661,10 @@ using a fortran linker.
   </SLIBS>
 </compiler>
 
+<compiler>
+  <FFLAGS>
+    <append MODEL="hycom">$(FC_AUTO_R8)</append>
+  </FFLAGS>
+</compiler>
+
 </config_compilers>
