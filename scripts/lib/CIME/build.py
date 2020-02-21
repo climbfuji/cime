@@ -505,7 +505,7 @@ def _case_build_impl(caseroot, case, sharedlib_only, model_only, buildlist,
     t2 = time.time()
     logs = []
 
-    if not model_only and cime_model != "ufs":
+    if not model_only or case.get_value("COMP_CPL"):
         logs = _build_libraries(case, exeroot, sharedpath, caseroot,
                                 cimeroot, libroot, lid, compiler, buildlist, comp_interface)
 
